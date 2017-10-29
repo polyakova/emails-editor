@@ -12,7 +12,7 @@ export class EmailsService {
     }
 
     generateEmail(): string {
-        var length = Math.random() * 10;
+        var length = Math.random() * 10 + 1;
         var email = "";
         var domain = "";
         var chars = "abcdefghijklmnopqrstuvwxyz0123456789";

@@ -103,8 +103,7 @@ export class EmailsEditorComponent implements OnInit {
     TAB: 9
   };
 
-  constructor(private fb: FormBuilder, private emailsService: EmailsService) {
-  }
+  constructor(private fb: FormBuilder, private emailsService: EmailsService) { }
 
   ngOnInit() {
     this.emailForm = this.fb.group({
@@ -163,8 +162,18 @@ export class EmailsEditorComponent implements OnInit {
   }
 
   private addEmails(emails: string[]): void {
+    
     emails = emails.map(x => x.trim()).filter((x) => x != '');
-    this.emails = this.emails.concat(emails).filter((x, i, array) => array.indexOf(x) === i);
+    
+    emails.forEach(email => {
+      var e = this.emails.find((value, i) =>
+        value.toLowerCase() == email.toLowerCase()
+      );
+    
+      if (e == null)
+        this.emails.push(email);
+    });
+    
     this.resetInput();
   }
 
