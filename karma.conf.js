@@ -6,7 +6,7 @@ module.exports = function (config) {
 
     files: [
       { pattern: "base.spec.ts" },
-      { pattern: "app/lib/components/*.+(ts|html)" }
+      { pattern: "app/lib/components/**/*.+(ts|html)" }
     ],
 
     preprocessors: {

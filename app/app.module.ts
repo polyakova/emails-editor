@@ -1,7 +1,7 @@
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent }  from './app.component';
-import { EmailsEditorModule }  from './lib/emails-editor.module';
+import { EmailsEditorModule }  from './lib/components/emails-editor/emails-editor.module';
 
 @NgModule({
   imports:      [ BrowserModule, EmailsEditorModule ],

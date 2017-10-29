@@ -1,6 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { AbstractControl, FormBuilder, FormGroup } from '@angular/forms';
-import { Keys } from '../shared/keys';
 import { EmailsService } from './emails.service';
 
 @Component({
@@ -98,6 +97,11 @@ export class EmailsEditorComponent implements OnInit {
 
   public emailForm: FormGroup;
   private emails: string[] = [];
+  private keys = {
+    COMMA: 188,
+    ENTER: 13,
+    TAB: 9
+  };
 
   constructor(private fb: FormBuilder, private emailsService: EmailsService) {
     this.emails.push("e@polyakova.net");
@@ -127,7 +131,7 @@ export class EmailsEditorComponent implements OnInit {
 
   private onKeydown(event: KeyboardEvent): void {
     switch (event.keyCode) {
-      case Keys.COMMA: case Keys.ENTER: case Keys.TAB:
+      case this.keys.COMMA: case this.keys.ENTER: case this.keys.TAB:
         this.addEmails([this.inputValue]);
         event.preventDefault();
         break;

@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { EmailsEditorComponent } from './lib/components/emails-editor.component';
+import { EmailsEditorComponent } from './lib/components/emails-editor/emails-editor.component';
 
 @Component({
  selector: 'root',
