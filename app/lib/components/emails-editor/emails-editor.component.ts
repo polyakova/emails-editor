@@ -104,7 +104,6 @@ export class EmailsEditorComponent implements OnInit {
   };
 
   constructor(private fb: FormBuilder, private emailsService: EmailsService) {
-    this.emails.push("e@polyakova.net");
   }
 
   ngOnInit() {
