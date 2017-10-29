@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/polyakova/share-by-email.git"
+    "url": "git+https://github.com/polyakova/emails-editor.git"
   },
   "author": "Evgeniya Polyakova",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/polyakova/email-editor/issues"
+    "url": "https://github.com/polyakova/emails-editor/issues"
   },
-  "homepage": "https://github.com/polyakova/email-editor#README",
+  "homepage": "https://github.com/polyakova/emails-editor#README",
   "devDependencies": {
     "@types/jasmine": "^2.6.2",
     "awesome-typescript-loader": "^3.2.3",
